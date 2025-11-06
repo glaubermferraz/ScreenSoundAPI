@@ -15,7 +15,8 @@ using (HttpClient client = new HttpClient())
         //musicas[240].ExibirFichaTecnica();
         //Console.WriteLine("\nMostrando todos os gêneros musicais:");
         //LinqFilter.FiltrarTodosOsGenerosMusicais(musicas);
-        LinqOrder.ExibirListaDeArtistasOrdenados(musicas);
+        //LinqOrder.ExibirListaDeArtistasOrdenados(musicas);
+        LinqFilter.FiltrarArtistasPorGeneroMusical(musicas, "pop");
     }
     catch (Exception ex)
     {

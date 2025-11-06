@@ -34,6 +34,8 @@ using (HttpClient client = new HttpClient())
         musicasPreferidasJeep.AdicionarMusicasFavoritas(musicas[899]);
         musicasPreferidasJeep.AdicionarMusicasFavoritas(musicas[1345]);
         musicasPreferidasJeep.ExibirMusicaFavoritas();
+
+        musicasPreferidasJeep.GerarArquivoJson();
     }
     catch (Exception ex)
     {

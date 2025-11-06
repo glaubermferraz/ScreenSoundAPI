@@ -31,5 +31,21 @@ namespace ScreenSoundApi.Filtros
                 Console.WriteLine($"- {musica.Nome}");
             }
         }
+        public static void ExibirTodasMusicasTonalidadeCSharp(List<Musica> musicas)
+        {
+            var musicasTonalidadeCSharp = musicas
+                .Where(musica => musica.Tonalidade!.Equals("C#"))
+                .GroupBy(musica => new { musica.Artista, musica.Nome })
+                .Select(g => g.First()) // Remove repetidos
+                .OrderBy(musica => musica.Artista)
+                .ThenBy(musica => musica.Nome) // Ordena por música após ordenar por artista
+                .ToList();
+
+            Console.WriteLine("Músicas com a Tonalidade C#:");
+            foreach (var musica in musicasTonalidadeCSharp)
+            {
+                Console.WriteLine($"- {musica.Artista} - {musica.Nome}");
+            }
+        }
     }
 }

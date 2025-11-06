@@ -13,6 +13,7 @@ using (HttpClient client = new HttpClient())
         //Console.WriteLine($"Quantidade de músicas: {musicas.Count}");
         //Console.WriteLine("\nMostrando dados da música posição 240 na lista:");
         musicas[240].ExibirFichaTecnica();
+        LinqFilter.ExibirTodasMusicasTonalidadeCSharp(musicas);
         //Console.WriteLine("\nMostrando todos os gêneros musicais:");
         //LinqFilter.FiltrarTodosOsGenerosMusicais(musicas);
         //LinqOrder.ExibirListaDeArtistasOrdenados(musicas);

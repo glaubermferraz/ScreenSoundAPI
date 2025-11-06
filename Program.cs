@@ -17,7 +17,23 @@ using (HttpClient client = new HttpClient())
         //LinqFilter.FiltrarTodosOsGenerosMusicais(musicas);
         //LinqOrder.ExibirListaDeArtistasOrdenados(musicas);
         //LinqFilter.FiltrarArtistasPorGeneroMusical(musicas, "pop");
-        LinqFilter.FiltrarMusicasDeUmArtista(musicas, "Michel Teló");
+        //LinqFilter.FiltrarMusicasDeUmArtista(musicas, "Michel Teló");
+        MusicasPreferidas musicasPreferidasGlauber = new MusicasPreferidas("Glauber");
+        musicasPreferidasGlauber.AdicionarMusicasFavoritas(musicas[0]);
+        musicasPreferidasGlauber.AdicionarMusicasFavoritas(musicas[3]);
+        musicasPreferidasGlauber.AdicionarMusicasFavoritas(musicas[45]);
+        musicasPreferidasGlauber.AdicionarMusicasFavoritas(musicas[67]);
+        musicasPreferidasGlauber.AdicionarMusicasFavoritas(musicas[90]);
+        musicasPreferidasGlauber.ExibirMusicaFavoritas();
+
+        MusicasPreferidas musicasPreferidasJeep = new MusicasPreferidas("Jeep");
+        musicasPreferidasJeep.AdicionarMusicasFavoritas(musicas[32]);
+        musicasPreferidasJeep.AdicionarMusicasFavoritas(musicas[55]);
+        musicasPreferidasJeep.AdicionarMusicasFavoritas(musicas[675]);
+        musicasPreferidasJeep.AdicionarMusicasFavoritas(musicas[777]);
+        musicasPreferidasJeep.AdicionarMusicasFavoritas(musicas[899]);
+        musicasPreferidasJeep.AdicionarMusicasFavoritas(musicas[1345]);
+        musicasPreferidasJeep.ExibirMusicaFavoritas();
     }
     catch (Exception ex)
     {
